@@ -1,0 +1,23 @@
+1. Calculate everything in Frenet coordinates:
+	- own location, goal location, other cars
+
+2. Set goals:
+	- Goal: travel up to an point on the course as fast as possible (right lane)
+	- compute possible goal loactions each decision-step
+	- keep lane, prepare go left, prepare go right, go left, go right
+	- use cost-functions to decide what actions to take
+		--> no overtaking on right side
+		--> as close to vmax as possible
+		--> keep distance to car in front
+		--> dont swerve into car on lane next to you
+		--> if possible keep to right lane
+
+3. Calculate possible trajectories to reach immidiate goal
+	- calculate different trajectories for selected goal
+	- use cost function to decide for best trajectory (using two trajectories? , s(t), d(t))
+		--> minimizing jerk, a_max, a_min (both lateral and transversal)
+		--> physical limitations (a_max, a_min)
+			--> for total lateral a --> calculate xy postions
+		--> minimum distance to cars		
+
+	- select trajectory --> recalculate in xy

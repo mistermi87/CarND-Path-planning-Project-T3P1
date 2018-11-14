@@ -1,0 +1,4 @@
+cp /mnt/c/Users/mstei/Documents/Projects/CarND/Term3/CarND-Path-Planning-Project/src/main.cpp CarND-Path-Planning-Project/src/main.cpp
+cd CarND-Path-Planning-Project/build
+cmake .. && make
+./path_planning
